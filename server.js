@@ -37,13 +37,13 @@ hbs.registerHelper("screamIt", (text) => {
 app.get("/", (req, res) => {
     res.render("home.hbs", {
         pageTitle: "Home Page",
-        welcomeMessage: "Welcome to my website!",
+        welcomeMessage: "Welcome to my website!"
     })
 });
 
 app.get("/about", (req, res) => {
     res.render("about.hbs", {
-        pageTitle: "About Page",
+        pageTitle: "About Page"
     });
 });
 
@@ -51,6 +51,12 @@ app.get("/bad", (req, res) => {
     res.send({
         errorMessage: "unable to find page"
     })
+});
+
+app.get("/portfolio", (req, res) => {
+   res.render("portfolio.hbs", {
+        pageTitle: "Portfolio Page"
+   });
 });
 
 app.listen(port, () => {
